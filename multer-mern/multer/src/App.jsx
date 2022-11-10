@@ -7,6 +7,7 @@ function App() {
   const uploadFile = ()=>{
     const formData = new FormData();
     formData.append("image", file);
+    console.log(file);
     console.log(formData);
     axios.post("http://localhost:5000/api/file/upload", formData)
     .then((response)=>{
